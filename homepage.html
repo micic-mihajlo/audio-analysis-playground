@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Sound Analysis Page</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-$END$
+
+    <button id="btn">CLICK ME !</button>
+    <button id="button_upload">Upload</button>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+    <div class="form">
+        <form>
+            <label>
+                Artist Name:<br />
+                <input type="text" class='artist-name' placeholder="Artist Name">
+            </label>
+            <label>
+                Song Name:<br />
+                <input type="text" class='song-name' placeholder="Song Name">
+            </label>
+            <label>
+                Album Cover Picture:<br />
+                <input type='file' accept="image/*" class="album-img" placeholder="">
+            </label>
+            <label>
+                Upload a song:<br />
+                <input type='file' accept="audio/*" class="song-aud" placeholder="">
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="artist">
+        <img src="">
+        <h2></h2>
+        <h3></h3>
+    </div>
+    <figure>
+        <audio class="aud"
+               controls
+               src=" ">
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio>
+    </figure>
 </body>
 </html>
