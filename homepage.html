@@ -4,48 +4,41 @@
     <meta charset="UTF-8">
     <title>Sound Analysis Page</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
 
 </head>
 <body>
 
-    <button id="btn">CLICK ME !</button>
-    <button id="button_upload">Upload</button>
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <div id="div1">
+        <input type="file" id="input" accept=".mp3, .wav">
+        <div id="cover"></div>
+        <p id="title"></p>
+        <p id="artist"></p>
+        <p id="album"></p>
+        <p id="year"></p>
+        <p id="genre"></p>
+        <p id="comment"></p>
+
+    </div>
+    <button id="btn">do not press this button</button><br />
+    ⠄⠄⠄⠄⠄⠄⠄⣠⣴⣶⣿⣿⡿⠶⠄⠄⠄⠄⠐⠒⠒⠲⠶⢄⠄⠄⠄⠄⠄⠄<br />
+    ⠄⠄⠄⠄⠄⣠⣾⡿⠟⠋⠁⠄⢀⣀⡀⠤⣦⢰⣤⣶⢶⣤⣤⣈⣆⠄⠄⠄⠄⠄<br />
+    ⠄⠄⠄⠄⢰⠟⠁⠄⢀⣤⣶⣿⡿⠿⣿⣿⣊⡘⠲⣶⣷⣶⠶⠶⠶⠦⠤⡀⠄⠄<br />
+    ⠄⠔⠊⠁⠁⠄⠄⢾⡿⣟⡯⣖⠯⠽⠿⠛⠛⠭⠽⠊⣲⣬⠽⠟⠛⠛⠭⢵⣂⠄<br />
+    ⡎⠄⠄⠄⠄⠄⠄⠄⢙⡷⠋⣴⡆⠄⠐⠂⢸⣿⣿⡶⢱⣶⡇⠄⠐⠂⢹⣷⣶⠆<br />
+    ⡇⠄⠄⠄⠄⣀⣀⡀⠄⣿⡓⠮⣅⣀⣀⣐⣈⣭⠤⢖⣮⣭⣥⣀⣤⣤⣭⡵⠂⠄<br />
+    ⣤⡀⢠⣾⣿⣿⣿⣿⣷⢻⣿⣿⣶⣶⡶⢖⣢⣴⣿⣿⣟⣛⠿⠿⠟⣛⠉⠄⠄⠄<br />
+    ⣿⡗⣼⣿⣿⣿⣿⡿⢋⡘⠿⣿⣿⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠄⠄<br />
+    ⣿⠱⢿⣿⣿⠿⢛⠰⣞⡛⠷⣬⣙⡛⠻⠿⠿⠿⣿⣿⣿⣿⣿⣿⣿⠿⠛⣓⡀⠄<br />
+    ⢡⣾⣷⢠⣶⣿⣿⣷⣌⡛⠷⣦⣍⣛⠻⠿⢿⣶⣶⣶⣦⣤⣴⣶⡶⠾⠿⠟⠁⠄<br />
+    ⣿⡟⣡⣿⣿⣿⣿⣿⣿⣿⣷⣦⣭⣙⡛⠓⠒⠶⠶⠶⠶⠶⠶⠶⠶⠿⠟⠄⠄⠄<br />
+    ⠿⡐⢬⣛⡻⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡶⠟⠃⠄⠄⠄⠄⠄⠄<br />
+    ⣾⣿⣷⣶⣭⣝⣒⣒⠶⠬⠭⠭⠭⠭⠭⠭⠭⣐⣒⣤⣄⡀⠄⠄⠄⠄⠄⠄⠄⠄<br />
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠄⠄⠄⠄⠄⠄⠄<br />
     <script src="app.js"></script>
 
-    <div class="form">
-        <form>
-            <label>
-                Artist Name:<br />
-                <input type="text" class='artist-name' placeholder="Artist Name">
-            </label>
-            <label>
-                Song Name:<br />
-                <input type="text" class='song-name' placeholder="Song Name">
-            </label>
-            <label>
-                Album Cover Picture:<br />
-                <input type='file' accept="image/*" class="album-img" placeholder="">
-            </label>
-            <label>
-                Upload a song:<br />
-                <input type='file' accept="audio/*" class="song-aud" placeholder="">
-            </label>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <div class="artist">
-        <img src="">
-        <h2></h2>
-        <h3></h3>
-    </div>
-    <figure>
-        <audio class="aud"
-               controls
-               src=" ">
-            Your browser does not support the
-            <code>audio</code> element.
-        </audio>
-    </figure>
+
 </body>
 </html>
