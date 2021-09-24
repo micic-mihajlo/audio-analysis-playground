@@ -27,51 +27,20 @@ document.querySelector("#input").addEventListener("change", (e) => {
             }
             document.querySelector("#cover").style.backgroundImage = `url(data:${format};base64,${window.btoa(base64String)})`;
 
-            document.querySelector('#title').textContent = tag.tags.title;
-            document.querySelector('#artist').textContent = tag.tags.artist;
-            document.querySelector('#album').textContent = tag.tags.album;
-            document.querySelector('#year').textContent = tag.tags.year;
-            document.querySelector('#genre').textContent = tag.tags.genre;
-            document.querySelector('#comment').textContent = tag.tags.comment;
+            document.querySelector('#title').textContent = "Title: " + tag.tags.title;
+            document.querySelector('#artist').textContent = "Artist: " + tag.tags.artist;
+            document.querySelector('#album').textContent = "Album: " + tag.tags.album;
+            document.querySelector('#year').textContent = "Year: " + tag.tags.year;
+            document.querySelector('#genre').textContent = "Genre: " + tag.tags.genre;
+            //document.querySelector('#comment').textContent = "Comment: " + tag.tags.comment;
         },
         onError: function(error){
             console.log(error)
         }
     });
+    let fileCopy = new Audio()
+    fileCopy.src = e.target.files[0];
+    console.log(fileCopy.sampleRate);
+
+
 });
-/*
-const getVals = () =>{
-    const artistName = document.querySelector('input.artist-name');
-    const songName = document.querySelector('input.song-name');
-    const albumCover = document.querySelector('input.album-img').files[0];
-    const song = document.querySelector('input.song-aud').files[0];
-
-    document.querySelector('form').style.display ='none'
-
-    return [artistName, songName, albumCover, song];
-}
-
-const convertInput = () =>{ //to be able to display images/audio, we need to convert it to URL
-    const [artistName, songName, albumCover, song] = getVals();
-
-    const albumCoverURL = URL.createObjectURL(albumCover);
-    const songURL = URL.createObjectURL(song);
-
-    return [albumCoverURL, songURL, artistName, songName];
-}
-
-const displayInputFile = () =>{
-    const [albumCoverURL, songURL, artistName, songName] = convertInput();
-
-    document.querySelector('.artist h2').innerHTML = '${artistName}';
-    document.querySelector('.artist h3').innerHTML = '${songName}';
-    document.querySelector('.artist img').setAttribute('src', albumCoverURL);
-    document.querySelector('.aud').setAttribute('src', songURL);
-
-}
-document.querySelector('submit').addEventListener('click', (e) => {
-    e.preventDefault();
-    console.log(displayInputFile())
-    displayInputFile();
-});*/
-
